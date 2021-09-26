@@ -1,3 +1,7 @@
+const video = document.querySelector('video');
+const button = document.querySelector('button');
+const player = new MediaPlayer({ el: video });
+
 function MediaPlayer(config) {
     this.media = config.el;
   }
@@ -18,8 +22,4 @@ function MediaPlayer(config) {
     }
   };
   
-  const video = document.querySelector('video');
-  const player = new MediaPlayer({ el: video });
-  
-  const button = document.querySelector('button');
   button.onclick = () => player.togglePlay();
